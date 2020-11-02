@@ -6,7 +6,7 @@ class MP3Importer
   end
   def files
     self.files = Dir.entries(self.path)
-  #  binding.pry
+    binding.pry
   end
   def import
   end
