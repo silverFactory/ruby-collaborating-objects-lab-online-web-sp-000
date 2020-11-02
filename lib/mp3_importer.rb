@@ -6,7 +6,7 @@ class MP3Importer
   end
   def files
     does_work = Dir.entries(self.path)
-    binding.pry
+  #  binding.pry
   end
   def import
   end
