@@ -5,7 +5,7 @@ class MP3Importer
     @path = file_path
   end
   def files
-    does_work = Dir.entries(self.path)
+    files = Dir.entries(self.path)
   #  binding.pry
   end
   def import
