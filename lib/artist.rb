@@ -14,10 +14,15 @@ class Artist
   def songs
     Song.all.select {|song| song.artist == self}
   end
-  def self.find_or_create_by_name(name)
+  def self.find_or_create_by_name(artist_name)
+    artist_instance = self.all.detect{|name| name == artist_name}
     #finds artist instance that matches name
-    #or
+    if artist_instance != nil
+      artist_instance
+    else
+      Artist.new(artist_name)
     #creates new instance if one doesn't exist
     #return instance of artist with attr #{name}
+    end
   end
 end
